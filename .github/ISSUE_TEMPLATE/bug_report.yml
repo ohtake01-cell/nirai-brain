@@ -1,0 +1,29 @@
+name: バグ報告（ニライBrain スタンドアロン版）
+description: 不具合・エラー・検索異常の報告（個人情報・機密本文は書かないでください）
+title: "[Bug][v0.1.0] "
+labels: ["bug", "standalone"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        `python3 scripts/brain_standalone_pack.py bug-report --root . --summary "症状" --open-github`
+        を実行すると、個人情報・機密本文を自動マスクした診断情報が自動入力されます。
+  - type: textarea
+    id: summary
+    attributes:
+      label: 症状の要約
+      description: 何を実行したときに何が起きましたか？（質問本文や社外秘データは書かないでください）
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: バージョン / OS / Python
+      placeholder: "v0.1.0 / macOS arm64 / Python 3.12"
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: 自動マスク済み診断ログ（任意）
+      render: text

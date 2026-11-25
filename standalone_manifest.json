@@ -1,0 +1,104 @@
+{
+  "schema": "kingdom.roundtable.shared_brain.standalone_manifest.v1",
+  "version": "0.1.0",
+  "repository": "ohtake01-cell/nirai-brain",
+  "bug_report_url": "https://github.com/ohtake01-cell/nirai-brain/issues/new",
+  "generated_at": "2026-11-25T04:33:35+00:00",
+  "default_mode_for_standalone": "cpu_agent",
+  "env_var": "KINGDOM_BRAIN_MODE=cpu_agent",
+  "external_pip_dependencies": [],
+  "python_min_version": "3.10",
+  "supported_platforms": [
+    "macOS",
+    "Linux",
+    "Windows (WSL2)"
+  ],
+  "known_limitations": [
+    "非WSLのネイティブWindowsはUnix fcntlファイルロック未対応（WSL2推奨）",
+    "autoモード（意味検索/リランク）には別途ローカルAIサービスが必要"
+  ],
+  "file_count": 12,
+  "optional_included": [],
+  "total_bytes": 937371,
+  "files": [
+    {
+      "file": "scripts/ai_availability.py",
+      "bytes": 15158,
+      "sha256": "b0e8bff1b500b6d5bd1fe027773ef451a9360d302c3fc12763a6c09371e6e1f0",
+      "required": true
+    },
+    {
+      "file": "scripts/brain_bm25.py",
+      "bytes": 6156,
+      "sha256": "eb148ef854167c974a71bdd301022f9d72b0a97b5a129cf6dc6d93b1938fc66e",
+      "required": true
+    },
+    {
+      "file": "scripts/brain_cpu_agent.py",
+      "bytes": 12122,
+      "sha256": "4627dcc8b611d9a406dd7ad9f346057dee4e7a3fb797119b4cdd9c5fcf36e22f",
+      "required": true
+    },
+    {
+      "file": "scripts/brain_evolve_rank.py",
+      "bytes": 58786,
+      "sha256": "70ead154d6b7cb53d7a5f82a159c49183d50748949b28ed04048c64a252486af",
+      "required": true
+    },
+    {
+      "file": "scripts/brain_review_triage.py",
+      "bytes": 2280,
+      "sha256": "554fecd851a9be66a5c41ce5fa2918e699769559b641e98e26bcd06d421bcf7f",
+      "required": true
+    },
+    {
+      "file": "scripts/brain_speed_cache.py",
+      "bytes": 56971,
+      "sha256": "84ef8003fdb6bb8c472306970ec73745a4ee7e15192e90abda8f2ac5c448f764",
+      "required": true
+    },
+    {
+      "file": "scripts/brain_text_utils.py",
+      "bytes": 2915,
+      "sha256": "66a0e9d456648999a098e1cdb9a62c65283f5e4a19f8e8643cc06557aa165570",
+      "required": true
+    },
+    {
+      "file": "scripts/kingdom_read_acceleration.py",
+      "bytes": 28373,
+      "sha256": "e6b2303aa2b60beba0b21c4501f4335f8052b60a5a7bdd2e251b3c649d6a5958",
+      "required": true
+    },
+    {
+      "file": "scripts/nirai_record_roles.py",
+      "bytes": 16082,
+      "sha256": "c276dbb5e799b4f252a35844d706e6e48024dbe4f8e1d315604767730493ba86",
+      "required": true
+    },
+    {
+      "file": "scripts/roundtable_brain.py",
+      "bytes": 499312,
+      "sha256": "ad186fac16c33fcf0e553a4762b03c355a2565d8d976e299a663cde5cb320864",
+      "required": true
+    },
+    {
+      "file": "scripts/roundtable_event.py",
+      "bytes": 223936,
+      "sha256": "54dc0b3b044f1593a6748e5cf1f376a641c4433ad386da9de8046fa07d42f37d",
+      "required": true
+    },
+    {
+      "file": "scripts/roundtable_media.py",
+      "bytes": 15280,
+      "sha256": "5b5e1db7cdba309babd5a9156d490df55ed5cfa2de1e46de99ca199c0b8a348c",
+      "required": true
+    }
+  ],
+  "management_tool": {
+    "file": "scripts/brain_standalone_pack.py",
+    "bytes": 37162,
+    "sha256": "dac73e91980744e06abb338fed57e747a3672315896cc288beb0c4ffa5f84034",
+    "required": false,
+    "role": "pack_verify_bugreport_update_tool"
+  }
+}
